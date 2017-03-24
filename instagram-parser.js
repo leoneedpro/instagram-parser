@@ -45,8 +45,6 @@ off();
   result = result.join('');
   result = result.match(/[^\s]+/g);
   result = result.join('\n');
-  var followers ={};
-  followers.name = result;
 console.log('%c//--------------------------------------------------------------------------------------------', 'color: #a22e1c; font-size:16px;');
   console.log(result);
 console.log('%c//--------------------------------------------------------------------------------------------', 'color: #a22e1c; font-size:16px;');
