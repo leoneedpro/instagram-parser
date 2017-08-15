@@ -1,18 +1,18 @@
 // Copyright Леонид Залюбовский 2017
 try {
 // Объявление переменных ------------------------------------------------------------
-var a = document.getElementsByClassName("_539vh _4j13h");   // Instagram
-var x = document.getElementsByClassName("_4gt3b");                // Instagram
-var n = document.getElementsByClassName("_cx1ua");               // Instagram
+var a = document.getElementsByClassName("_8q670 _b9n99");   // Instagram
+var x = document.getElementsByClassName("_gs38e");                // Instagram
+var n = document.getElementsByClassName("_6e4x5");               // Instagram
 var timeoutID ='';
 var t = 1;
 
 // Выборка кол-ва подписчиков и подписок по языку RU-EN ---------
 
-if (document.getElementsByClassName("_q44m8 _7z4zb")[0].innerHTML =="Подписчики" || document.getElementsByClassName("_q44m8 _7z4zb")[0].innerHTML =="Followers" ){
-var i = document.getElementsByClassName("_bkw5z")[1].innerHTML;
+if (document.getElementsByClassName("_lfwfo _euzqy")[0].innerHTML =="Подписчики" || document.getElementsByClassName("_lfwfo _euzqy")[0].innerHTML =="Followers" ){
+var i = document.getElementsByClassName("_fd86t")[1].innerHTML;
 }else{
-var i = document.getElementsByClassName("_bkw5z")[2].innerHTML;
+var i = document.getElementsByClassName("_fd86t")[2].innerHTML;
 }
 
 
