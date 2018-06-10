@@ -1,18 +1,19 @@
 // Copyright Леонид Залюбовский
 try {
 // Объявление переменных ------------------------------------------------------------
-var a = document.getElementsByClassName("_8q670 _b9n99");   // Instagram
-var x = document.getElementsByClassName("_gs38e");                // Instagram
-var n = document.getElementsByClassName("_6e4x5");               // Instagram
+var a = document.getElementsByClassName("SrXZj YHaCL");   	// ul тег аккаунтов
+var x = document.getElementsByClassName("j6cq2");           // div тег списка
+var n = document.getElementsByClassName("NroHT");           // li тег аккаунтов
 var timeoutID ='';
 var t = 1;
 
 // Выборка кол-ва подписчиков и подписок по языку RU-EN ---------
+// Классы расположены на главной странице Подписчики-Подписки
 
-if (document.getElementsByClassName("_lfwfo _euzqy")[0].innerHTML =="Подписчики" || document.getElementsByClassName("_lfwfo _euzqy")[0].innerHTML =="Followers" ){
-var i = document.getElementsByClassName("_fd86t")[1].innerHTML;
+if (document.getElementsByClassName("t48Bo fzjDT")[0].innerHTML =="Подписчики" || document.getElementsByClassName("t48Bo fzjDT")[0].innerHTML =="Followers" ){
+var i = document.getElementsByClassName("g47SY")[1].innerHTML;
 }else{
-var i = document.getElementsByClassName("_fd86t")[2].innerHTML;
+var i = document.getElementsByClassName("g47SY")[2].innerHTML;
 }
 
 
@@ -26,7 +27,7 @@ i = i.match(/[^,]+/g);
 i = i.join('');
 console.log('%cПАРСЕР ПОДПИСЧИКОВ INSTAGRAM', 'color: #1d6ba3; font-size:28px;');
 console.log('%c--------------------------------------------------------------------------------------------//', 'color: #a22e1c; font-size:16px;');
-console.log('%cРазработал Леонид Залюбовский 2017 | www.leoneed.pro | http://Instagram.com/leoneed.pro', 'color: #1d6ba3; font-size:14px;');
+console.log('%cРазработал Леонид Залюбовский 2018 | www.leoneed.pro | http://Instagram.com/leoneed.pro', 'color: #1d6ba3; font-size:14px;');
 console.log('%c--------------------------------------------------------------------------------------------//', 'color: #a22e1c; font-size:16px;');
 console.log('%cКол-во аккаунтов для сбора: '+i +' шт.', 'color: #13a555; font-size:20px;');
 console.log('%cНачался сбор данных, дождитесь выполнения...', 'color: #13a555; font-size:20px;');
