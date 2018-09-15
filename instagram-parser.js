@@ -1,21 +1,25 @@
 // Copyright Леонид Залюбовский
+
 try {
 // Объявление переменных ------------------------------------------------------------
-var a = document.getElementsByClassName("SrXZj YHaCL");   	// ul тег аккаунтов
-var x = document.getElementsByClassName("j6cq2");           // div тег списка
-var n = document.getElementsByClassName("NroHT");           // li тег аккаунтов
+var x = document.getElementsByClassName("j6cq2");           	// класс тега div списка аккаунтов
+var a = document.getElementsByClassName("rKm58  _6xe7A");   	// класс тега ul списка аккаунтов
+var n = document.getElementsByClassName("wo9IH");           	// класс тега li списка тег аккаунтов
 var timeoutID ='';
 var t = 1;
 
 // Выборка кол-ва подписчиков и подписок по языку RU-EN ---------
 // Классы расположены на главной странице Подписчики-Подписки
 
-if (document.getElementsByClassName("t48Bo fzjDT")[0].innerHTML =="Подписчики" || document.getElementsByClassName("t48Bo fzjDT")[0].innerHTML =="Followers" ){
+titleH1 = document.getElementsByClassName("m82CD")[0];	// класс тега h1 заголовка окна
+titleDIV = titleH1.getElementsByTagName("div")[0];		  // тег div заголовка
+title = titleDIV.innerHTML;
+
+if (title=="Подписчики" || title=="Followers" ){
 var i = document.getElementsByClassName("g47SY")[1].innerHTML;
 }else{
 var i = document.getElementsByClassName("g47SY")[2].innerHTML;
 }
-
 
 // --------------------------------------------------------------------------------------------
 
