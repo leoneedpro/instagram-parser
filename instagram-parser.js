@@ -1,9 +1,8 @@
-// Copyright Леонид Залюбовский
-
+//------------------
 try {
 // Объявление переменных ------------------------------------------------------------
-var x = document.getElementsByClassName("j6cq2");           	// класс тега div списка аккаунтов
-var a = document.getElementsByClassName("rKm58  _6xe7A");   	// класс тега ul списка аккаунтов
+var x = document.getElementsByClassName("isgrP");           	// класс тега div списка аккаунтов
+var a = document.getElementsByClassName("jSC57  _6xe7A");   	// класс тега ul списка аккаунтов
 var n = document.getElementsByClassName("wo9IH");           	// класс тега li списка тег аккаунтов
 var timeoutID ='';
 var t = 1;
@@ -73,3 +72,4 @@ function off() {
     clearTimeout(timeoutID);
     timeoutID = null;
 }
+//------------------
