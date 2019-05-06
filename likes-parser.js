@@ -1,4 +1,4 @@
-console.log('%cПАРСЕР ЛАЙКОВ INSTAGRAM', 'color: #1d6ba3; font-size:24px;');
+console.log('%cПАРСЕР ЛАЙКОВ (Аккаунты) INSTAGRAM', 'color: #1d6ba3; font-size:24px;');
 console.log('%cЛеонид Залюбовский 2019 | http://www.leoneed.pro | http://Instagram.com/leoneed.pro', 'color: #1d6ba3; font-size:14px;');
 try {
     // ----------------------------------------------------------------------------------
