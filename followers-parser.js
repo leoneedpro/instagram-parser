@@ -86,17 +86,13 @@ try {
             result_nick_name = JSON.stringify(result_nick_name);
             result_nick_name = result_nick_name.match(/[^{}"]+/g).join('').match(/[^,]+/g).join('\n').match(/[^:]+/g).join(' : ');
         }
-        console.log('%c--------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
         if (user_name == true) {
             console.log(result_nick_name);
         } else {
             console.log(result_nick);
         }
-        console.log('%c--------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
         console.log('%cАккаунтов собрано: ' + result_count + ' шт.', 'color: #13a555; font-size:18px;');
-        console.log('%c---------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
         console.log('%cВыделите собранные имена аккаунтов выше и нажмите CTRL-C, чтобы скопировать.', 'color: #13a555; font-size:16px;');
-        console.log('%c--------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
         console.log('%cЗаходите подписывайтесь, ставьте лайки! https://Instagram.com/leoneed.pro | http://www.leoneed.pro ', 'color: #1d6ba3; font-size:14px;');
     }
     // ----------------------------------------------------------------------------------
