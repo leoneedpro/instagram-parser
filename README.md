@@ -1,5 +1,5 @@
 # instagram-parser
-Парсер аккаунтов подписчиков и подписок в Instagram (followers-parser.js)
+Парсер аккаунтов подписчиков и подписок в Instagram (followers-parser.js)<br>
 Парсер активной аудитории (лайки) Instagram (likes-parser.js)
 
 ## Как использовать парсер подписчиков и подписок:
