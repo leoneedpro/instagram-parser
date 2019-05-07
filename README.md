@@ -1,7 +1,7 @@
 # instagram-parser
 Парсер аккаунтов подписчиков и подписок в Instagram (followers-parser.js)<br>
 Парсер активной аудитории (лайки) Instagram (likes-parser.js)
-[![instagram-parser-donate](https://wikidengi.com/wp-content/uploads/2016/12/perevody-s-yandeksa-na-visa.jpg)](https://yasobe.ru/na/instaparser)
+[![instagram-parser-donate](https://www.dropbox.com/s/1nxwhbmlt4c2rmi/money.png?dl=0)](https://yasobe.ru/na/instaparser)
 
 ## Как использовать парсер подписчиков и подписок:
 1. Заходим в web-браузере http://instagram.com и авторизуемся
