@@ -107,7 +107,7 @@ try {
         if (user_count >= total_count || user_count == 0) {
             user_count = total_count;
         }
-        if (li_accounts.length != total_count && (user_count > li_accounts.length) || height_scrolling[0] != height_scrolling[4]) {
+        if (li_accounts.length != total_count && (user_count > li_accounts.length) || (height_scrolling[0] != height_scrolling[4])) {
             div_accounts[0].scrollBy(0, 500);
             //  Если в массиве размеров скроллинга более 5 элементов, обнуляем
             if (height_scrolling.length == 5) {
