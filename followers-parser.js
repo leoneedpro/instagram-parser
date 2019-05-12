@@ -12,6 +12,7 @@ try {
     var div_accounts = document.getElementsByClassName("isgrP"); // класс тега div списка аккаунтов
     var ul_accounts = document.getElementsByClassName("jSC57  _6xe7A"); // класс тега ul списка аккаунтов
     var li_accounts = document.getElementsByClassName("wo9IH"); // класс тега li списка тег аккаунтов
+    var height_scrolling = []; // массив размеров (высот) скроллинга
     // ----------------------------------------------------------------------------------
     // СКОРОСТЬ ПРОКРУТКИ
     // Задаётся в миллисекундах
@@ -55,7 +56,6 @@ try {
     // ----------------------------------------------------------------------------------
     console.log('%cНачался сбор данных, дождитесь выполнения...', 'color: #13a555; font-size:16px;');
     // ----------------------------------------------------------------------------------
-    // ----------------------------------------------------------------------------------
     // ФУНКЦИЯ СБОРА ДАННЫХ
     // ----------------------------------------------------------------------------------
     function start_parsing() {
@@ -96,15 +96,23 @@ try {
         console.log('%cЗаходите подписывайтесь, ставьте лайки! https://Instagram.com/leoneed.pro | http://www.leoneed.pro ', 'color: #1d6ba3; font-size:14px;');
     }
     // ----------------------------------------------------------------------------------
-    // ----------------------------------------------------------------------------------
     // ФУНКЦИЯ СКРОЛЛИНГА
     // ----------------------------------------------------------------------------------
     function run_scrolling() {
+        // Определяем размер (высоту) прокрутки div_accounts
+        var div_accounts_height = div_accounts[0].scrollHeight;
+        // Заносим размеры в массив
+        height_scrolling.push(div_accounts_height);
+        // Если пользовательское значение больше реального или установлен 0, то собрать все аккаунта 
         if (user_count >= total_count || user_count == 0) {
             user_count = total_count;
         }
-        if (li_accounts.length != total_count && (user_count > li_accounts.length)) {
+        if (li_accounts.length != total_count && (user_count > li_accounts.length) || height_scrolling[0] != height_scrolling[4]) {
             div_accounts[0].scrollBy(0, 500);
+            //  Если в массиве размеров скроллинга более 5 элементов, обнуляем
+            if (height_scrolling.length == 5) {
+                height_scrolling = [];
+            }
             var timeoutID = setTimeout('run_scrolling()', speed_scrolling);
         } else {
             clearTimeout(timeoutID);
@@ -120,3 +128,5 @@ try {
 } catch (e) {
     console.log('%cНажмите на странице Instagram на Подписчиков или Подписки, и запустите заново скрипт', 'color: #a22e1c; font-size:18px;');
 }
+
+
