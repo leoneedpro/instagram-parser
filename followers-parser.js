@@ -103,7 +103,7 @@ try {
         var div_accounts_height = div_accounts[0].scrollHeight;
         // Заносим размеры в массив
         height_scrolling.push(div_accounts_height);
-        // Если пользовательское значение больше реального или установлен 0, то собрать все аккаунта 
+        // Если пользовательское значение больше реального или установлен 0, то собрать все аккаунты 
         if (user_count >= total_count || user_count == 0) {
             user_count = total_count;
         }
