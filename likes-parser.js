@@ -6,6 +6,7 @@ try {
     // ----------------------------------------------------------------------------------
     var accounts = [];
     var div_accounts = document.getElementsByClassName('RnEpo Yx5HN')[0];
+	var height_scrolling = []; // массив размеров (высот) скроллинга
     // ----------------------------------------------------------------------------------
     var scrollTag = div_accounts.getElementsByTagName('div');
     for (var i = 0; i < scrollTag.length; i++) {
@@ -13,11 +14,13 @@ try {
             var div_scroll = scrollTag[i];
         }
     }
+	// ----------------------------------------------------------------------------------
+	var div_full_scroll = div_scroll.getElementsByTagName('div');
     // ----------------------------------------------------------------------------------
     // СКОРОСТЬ ПРОКРУТКИ
     // Задаётся в миллисекундах
     // ----------------------------------------------------------------------------------
-    var speed_scrolling = 150;
+    var speed_scrolling = 200;
     // ----------------------------------------------------------------------------------
     // УКАЖИТЕ ТРЕБУЕМОЕ КОЛ-ВО АККАУНТОВ ДЛЯ СБОРА
     // Если указать 0 (ноль) - соберет все аккаунты, по умолчанию стоит 700, свыше возможны
@@ -91,13 +94,21 @@ try {
     // ФУНКЦИЯ СКРОЛЛИНГА
     // ----------------------------------------------------------------------------------
     function run_scrolling() {
+		// Определяем размер (высоту) прокрутки div_accounts
+        var div_accounts_height = div_full_scroll[0].scrollHeight;
+        // Заносим размеры в массив
+        height_scrolling.push(div_accounts_height);
         if (user_count >= total_count || user_count == 0) {
             user_count = total_count;
         }
-        if (accounts.length != total_count && (user_count > accounts.length)) {
+	if ((accounts.length != total_count) && (user_count > accounts.length) && (height_scrolling[0] != height_scrolling[4])) {
             div_scroll.scrollBy(0, 200);
+			 //  Если в массиве размеров скроллинга более 5 элементов, обнуляем
+            if (height_scrolling.length == 5) {
+                height_scrolling = [];
+            }
             var timeoutID = setTimeout('run_scrolling()', speed_scrolling);
-            start_parsing();
+			start_parsing();
         } else {
             clearTimeout(timeoutID);
             end_parsing();
@@ -112,3 +123,4 @@ try {
 } catch (e) {
     console.log('%cНажмите на странице поста на кол-во отметок "Нравится", и запустите заново скрипт', 'color: #a22e1c; font-size:18px;');
 }
+
