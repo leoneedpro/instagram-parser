@@ -63,7 +63,7 @@ try {
         // ------------------------------------------------------------------------------
         // Разбор ников аккаунтов
         // ------------------------------------------------------------------------------
-        var result_nick = accounts.match(/title="[^"]+"/g);
+        var result_nick = accounts.match(/href="[^"]+"/g).join(' ').match(/\/.*?\//g).join(' ').match(/[^\/\s]+/g).filter((v,i,s) => (s.indexOf(v) == i));
         result_nick.splice(user_count);
         var result_count = result_nick.length;
         result_nick = result_nick.join(' ').match(/"[^"]+"/g).join(' ').match(/[^"]+/g).join('').match(/[^\s]+/g).join('\n');
