@@ -12,15 +12,16 @@ try {
     for (var i = 0; i < scrollTag.length; i++) {
         if (scrollTag[i].style.height == '356px') {
             var div_scroll = scrollTag[i];
+            console.log(div_scroll);
         }
     }
 	// ----------------------------------------------------------------------------------
-	var div_full_scroll = div_scroll.getElementsByTagName('div');
+    var div_full_scroll = div_scroll.getElementsByTagName('div');
     // ----------------------------------------------------------------------------------
     // СКОРОСТЬ ПРОКРУТКИ
     // Задаётся в миллисекундах
     // ----------------------------------------------------------------------------------
-    var speed_scrolling = 200;
+    var speed_scrolling = 300;
     // ----------------------------------------------------------------------------------
     // УКАЖИТЕ ТРЕБУЕМОЕ КОЛ-ВО АККАУНТОВ ДЛЯ СБОРА
     // Если указать 0 (ноль) - соберет все аккаунты, по умолчанию стоит 700, свыше возможны
@@ -51,7 +52,7 @@ try {
     // УСЛОВИЕ ВЫБОРА ОТМЕТОК НРАВИТСЯ
     // ----------------------------------------------------------------------------------
     if (title == "Отметки \"Нравится\"" || title == "Likes") {
-        var total_count = document.getElementsByClassName("Nm9Fw")[0].innerHTML;
+        var total_count = document.getElementsByTagName("h4")[0].innerHTML;
         total_count = total_count.match(/<span>[^]+/g).join('').match(/[^\D+]+/g).join('');
     } else {
         console.log("стоп");
@@ -121,6 +122,6 @@ try {
     run_scrolling();
     // ----------------------------------------------------------------------------------
 } catch (e) {
-    console.log('%cНажмите на странице поста на кол-во отметок "Нравится", и запустите заново скрипт', 'color: #a22e1c; font-size:18px;');
+    console.log('%cНажмите на странице поста на кол-во отметок "Нравится ... и другим", и запустите заново скрипт', 'color: #a22e1c; font-size:18px;');
 }
 
