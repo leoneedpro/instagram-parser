@@ -52,7 +52,7 @@ try {
     // УСЛОВИЕ ВЫБОРА ОТМЕТОК НРАВИТСЯ
     // ----------------------------------------------------------------------------------
     if (title == "Отметки \"Нравится\"" || title == "Likes") {
-        var total_count = document.getElementsByTagName("h4")[0].innerHTML;
+        var total_count = document.getElementsByClassName("Nm9Fw")[0].innerHTML;
         total_count = total_count.match(/<span>[^]+/g).join('').match(/[^\D+]+/g).join('');
     } else {
         console.log("стоп");
