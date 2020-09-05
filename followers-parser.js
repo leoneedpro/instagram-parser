@@ -1,10 +1,3 @@
-console.log('%c||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||', 'color: #13a555; font-size:16px;');
-console.log('%cПАРСЕР ПОДПИСЧИКОВ И ПОДПИСОК INSTAGRAM', 'color: #1d6ba3; font-size:24px;');
-console.log('%c||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||', 'color: #13a555; font-size:16px;');
-console.log('%c--------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
-console.log('%cЛеонид Залюбовский 2019 | http://www.leoneed.pro | http://Instagram.com/leoneed.pro', 'color: #1d6ba3; font-size:14px;');
-console.log('%c--------------------------------------------------------------------------------------', 'color: #13a555; font-size:16px;');
-// --------------------------------------------------------------------------------------
 try {
     // ----------------------------------------------------------------------------------
     // ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ
@@ -63,37 +56,38 @@ try {
         // ------------------------------------------------------------------------------
         // Разбор ников аккаунтов
         // ------------------------------------------------------------------------------
-        var result_nick = accounts.match(/title="[^"]+"/g);
-        result_nick.splice(user_count);
-        var result_count = result_nick.length;
-        result_nick = result_nick.join(' ').match(/"[^"]+"/g).join(' ').match(/[^"]+/g).join('').match(/[^\s]+/g).join('\n');
-        // ------------------------------------------------------------------------------
-        // Разбор имен аккаунтов
-        // ------------------------------------------------------------------------------
-        if (user_name == true) {
-            var result_name = accounts.match(/<div class="wFPL8 ">[^<]+/g)
-            result_name.splice(user_count);
-            result_nick = result_nick.match(/[^\n]+/g);
-            result_name = result_name.join('').match(/>[^<]+/g).join('').match(/[^>]+/g).join('\n');
-            result_name = result_name.match(/[^\n]+/g);
-            // --------------------------------------------------------------------------
-            // Создаем ассоциативный массив и преобразовываем в строку
-            // --------------------------------------------------------------------------
-            var result_nick_name = {};
-            for (var i = 0; i < result_nick.length; i++) {
-                result_nick_name[result_nick[i]] = result_name[i];
-            }
-            result_nick_name = JSON.stringify(result_nick_name);
-            result_nick_name = result_nick_name.match(/[^{}"]+/g).join('').match(/[^,]+/g).join('\n').match(/[^:]+/g).join(' : ');
-        }
-        if (user_name == true) {
-            console.log(result_nick_name);
-        } else {
-            console.log(result_nick);
-        }
-        console.log('%cАккаунтов собрано: ' + result_count + ' шт.', 'color: #13a555; font-size:18px;');
-        console.log('%cВыделите собранные имена аккаунтов выше и нажмите CTRL-C, чтобы скопировать.', 'color: #13a555; font-size:16px;');
-        console.log('%cЗаходите подписывайтесь, ставьте лайки! https://Instagram.com/leoneed.pro | http://www.leoneed.pro ', 'color: #1d6ba3; font-size:14px;');
+        var result_nick = accounts.match(/href="[^"]+"/g).join(' ').match(/\/.*?\//g).join(' ').match(/[^\/\s]+/g).filter((v,i,s) => (s.indexOf(v) == i));
+        console.log(result_nick.join("\n"));
+//         result_nick.splice(user_count);
+//         var result_count = result_nick.length;
+//         result_nick = result_nick.join(' ').match(/"[^"]+"/g).join(' ').match(/[^"]+/g).join('').match(/[^\s]+/g).join('\n');
+//         // ------------------------------------------------------------------------------
+//         // Разбор имен аккаунтов
+//         // ------------------------------------------------------------------------------
+//         if (user_name == true) {
+//             var result_name = accounts.match(/<div class="wFPL8 ">[^<]+/g)
+//             result_name.splice(user_count);
+//             result_nick = result_nick.match(/[^\n]+/g);
+//             result_name = result_name.join('').match(/>[^<]+/g).join('').match(/[^>]+/g).join('\n');
+//             result_name = result_name.match(/[^\n]+/g);
+//             // --------------------------------------------------------------------------
+//             // Создаем ассоциативный массив и преобразовываем в строку
+//             // --------------------------------------------------------------------------
+//             var result_nick_name = {};
+//             for (var i = 0; i < result_nick.length; i++) {
+//                 result_nick_name[result_nick[i]] = result_name[i];
+//             }
+//             result_nick_name = JSON.stringify(result_nick_name);
+//             result_nick_name = result_nick_name.match(/[^{}"]+/g).join('').match(/[^,]+/g).join('\n').match(/[^:]+/g).join(' : ');
+//         }
+//         if (user_name == true) {
+//             console.log(result_nick_name);
+//         } else {
+//             console.log(result_nick);
+//         }
+//         console.log('%cАккаунтов собрано: ' + result_count + ' шт.', 'color: #13a555; font-size:18px;');
+//         console.log('%cВыделите собранные имена аккаунтов выше и нажмите CTRL-C, чтобы скопировать.', 'color: #13a555; font-size:16px;');
+//         console.log('%cЗаходите подписывайтесь, ставьте лайки! https://Instagram.com/leoneed.pro | http://www.leoneed.pro ', 'color: #1d6ba3; font-size:14px;');
     }
     // ----------------------------------------------------------------------------------
     // ФУНКЦИЯ СКРОЛЛИНГА
