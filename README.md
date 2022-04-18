@@ -24,6 +24,6 @@
 
 [![instagram-parser](https://img.youtube.com/vi/HUHPDRmohPg/0.jpg)](https://www.youtube.com/watch?v=HUHPDRmohPg)
 
-www.leoneed.pro | www.instagram.com/leoneed.pro | www.vk.com/leovladivostok
+www.leoneed.pro | www.instagram.com/leoneed.pro | www.vk.com/leoneedstudio
 
 Подписывайтесь, ставьте лайки, до новых встреч!:v:
