@@ -10,7 +10,7 @@ try {
     // ОБЪЯВЛЕНИЕ ПЕРЕМЕННЫХ
     // ----------------------------------------------------------------------------------
     var div_accounts = document.getElementsByClassName("isgrP"); // класс тега div списка аккаунтов
-    var ul_accounts = document.getElementsByClassName("jSC57  _6xe7A"); // класс тега ul списка аккаунтов
+    var ul_accounts = document.getElementsByClassName("_6xe7A"); // класс тега ul списка аккаунтов
     var li_accounts = document.getElementsByClassName("wo9IH"); // класс тега li списка тег аккаунтов
     var height_scrolling = []; // массив размеров (высот) скроллинга
     // ----------------------------------------------------------------------------------
@@ -33,8 +33,8 @@ try {
     // Классы расположены на главной странице Подписчики-Подписки
     // ----------------------------------------------------------------------------------
     var titleH1 = document.getElementsByClassName("m82CD")[0]; // класс тега h1 заголовка окна
-    //  var titleDIV = titleH1.getElementsByTagName("div")[0]; // тег div заголовка
-    var title = titleH1.innerHTML;
+    var titleDIV = titleH1.getElementsByTagName("div")[0]; // тег div заголовка
+    var title = titleDIV.innerHTML;
     // ----------------------------------------------------------------------------------
     // УСЛОВИЕ ВЫБОРА ПОДПИСЧИКИ ИЛИ ПОДПИСКИ
     // ----------------------------------------------------------------------------------
